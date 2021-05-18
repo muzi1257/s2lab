@@ -1,0 +1,6 @@
+.container .recipes div {
+    border-bottom: 3px solid black;
+    margin-bottom: 7px;
+    border-style: dotted;
+  }
+  
