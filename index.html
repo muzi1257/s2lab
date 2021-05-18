@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>S2 Lab</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/javascript/api.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="container">
+    <h1>Recipes API client</h1>
+    <div class="form-group">
+        <label for="title">Required Recipe</label>
+        <input type="text" name="Recipe" id="title" class="form-control" placeholder="Recipe" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Enter Name of Recipe</small>
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <input type="text" name="body" id="body" class="form-control" placeholder="Details of Recipe" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Enter details of recipe</small>
+    </div>
+    <button class="btn btn-info addrecipe">Add Recipes</button>
+    <div class="recipes">
+        Loading...
+
+    </div>
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+      Launch
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="updatemodel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Recipe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" class="updateid"><br>
+                    <div class="form-group">
+                        <label for="updatetitle">Title</label>
+                        <input type="text" class="form-control" name="updatetitle" id="updatetitle" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Enter Title to update</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Body</label>
+                        <input type="text" class="form-control" name="updatebody" id="updatebody" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Enter the body to update</small>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary savechanges">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
